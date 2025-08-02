@@ -13,34 +13,34 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
     {/* Background Image */}
     <div className="absolute inset-0 w-full h-full">
       <img
-        src="/images/Image_fx.jpg"
+        src="/images/Image_fx (1).jpg"
         alt="Fresh Kicks Hero"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-black/40" />
     </div>
         
         {/* Content */}
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
             Welcome to Fresh Kicks
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto opacity-90 px-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-12 max-w-4xl mx-auto opacity-95 leading-relaxed">
             Discover amazing products at unbeatable prices. Quality meets affordability.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto">
             <button
               onClick={() => onNavigate('products-men')}
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-[#f26457] text-white font-semibold rounded-lg hover:bg-[#f26457]/90 transition-colors text-base sm:text-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-[#f26457] text-white font-semibold rounded-xl hover:bg-[#f26457]/90 transition-all duration-300 text-lg sm:text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <ShoppingBag className="mr-2" size={20} />
+              <ShoppingBag className="mr-3" size={24} />
               Shop Men
             </button>
             <button
               onClick={() => onNavigate('products-women')}
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-[#f2b749] text-white font-semibold rounded-lg hover:bg-[#f2b749]/90 transition-colors text-base sm:text-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-[#f2b749] text-white font-semibold rounded-xl hover:bg-[#f2b749]/90 transition-all duration-300 text-lg sm:text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <ShoppingBag className="mr-2" size={20} />
+              <ShoppingBag className="mr-3" size={24} />
               Shop Women
             </button>
           </div>
@@ -48,57 +48,57 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-8 sm:py-12 lg:py-16">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             <div className="text-center">
-              <div className="bg-[#f26457]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Star className="text-[#f26457]" size={20} />
+              <div className="bg-[#f26457]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Star className="text-[#f26457]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Quality Products</h3>
-              <p className="text-sm sm:text-base text-gray-600">Carefully curated selection of premium items</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Quality Products</h3>
+              <p className="text-base sm:text-lg text-gray-600">Carefully curated selection of premium items</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#f2b749]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Truck className="text-[#f2b749]" size={20} />
+              <div className="bg-[#f2b749]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Truck className="text-[#f2b749]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Fast Shipping</h3>
-              <p className="text-sm sm:text-base text-gray-600">Quick and reliable delivery to your doorstep</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Fast Shipping</h3>
+              <p className="text-base sm:text-lg text-gray-600">Quick and reliable delivery to your doorstep</p>
             </div>
             <div className="text-center sm:col-span-2 lg:col-span-1">
-              <div className="bg-[#f2c849]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <ShoppingBag className="text-[#f2c849]" size={20} />
+              <div className="bg-[#f2c849]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <ShoppingBag className="text-[#f2c849]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Easy Shopping</h3>
-              <p className="text-sm sm:text-base text-gray-600">Simple ordering process with cash on delivery</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Easy Shopping</h3>
+              <p className="text-base sm:text-lg text-gray-600">Simple ordering process with cash on delivery</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Categories Section */}
-      <section className="bg-white py-8 sm:py-12 lg:py-16">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Shop by Category</h2>
-            <p className="text-sm sm:text-base text-gray-600">Choose your style and explore our collections</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Shop by Category</h2>
+            <p className="text-lg sm:text-xl text-gray-600">Choose your style and explore our collections</p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
             {/* Men's Category */}
             <div className="relative group cursor-pointer" onClick={() => onNavigate('products-men')}>
-              <div className="relative overflow-hidden rounded-lg shadow-lg h-64 sm:h-80">
-                                  <img
-                    src="/images/Image_fx (1).jpg"
-                    alt="Men's Collection"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Men's Collection</h3>
-                  <p className="text-xs sm:text-sm opacity-90">Discover stylish footwear for men</p>
+              <div className="relative overflow-hidden rounded-2xl shadow-xl h-80 sm:h-96">
+                <img
+                  src="/images/Image_fx (1).jpg"
+                  alt="Men's Collection"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 text-white">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Men's Collection</h3>
+                  <p className="text-sm sm:text-base opacity-90">Discover stylish footwear for men</p>
                 </div>
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white text-[#f26457] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
+                <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-white text-[#f26457] px-4 sm:px-5 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg">
                   Shop Now
                 </div>
               </div>
@@ -106,18 +106,18 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             {/* Women's Category */}
             <div className="relative group cursor-pointer" onClick={() => onNavigate('products-women')}>
-              <div className="relative overflow-hidden rounded-lg shadow-lg h-64 sm:h-80">
-                                  <img
-                    src="/images/Image_fx (2).jpg"
-                    alt="Women's Collection"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Women's Collection</h3>
-                  <p className="text-xs sm:text-sm opacity-90">Explore elegant footwear for women</p>
+              <div className="relative overflow-hidden rounded-2xl shadow-xl h-80 sm:h-96">
+                <img
+                  src="/images/Image_fx (2).jpg"
+                  alt="Women's Collection"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 text-white">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Women's Collection</h3>
+                  <p className="text-sm sm:text-base opacity-90">Explore elegant footwear for women</p>
                 </div>
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white text-[#f2b749] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
+                <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-white text-[#f2b749] px-4 sm:px-5 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg">
                   Shop Now
                 </div>
               </div>
@@ -127,51 +127,51 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Best Sellers Section */}
-      <section className="bg-white py-8 sm:py-12 lg:py-16">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Best Sellers</h2>
-            <p className="text-sm sm:text-base text-gray-600">Our most popular products loved by customers</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Best Sellers</h2>
+            <p className="text-lg sm:text-xl text-gray-600">Our most popular products loved by customers</p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
+              <div key={item} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group transform hover:scale-105">
                 <div className="relative">
-                  <div className="w-full h-40 sm:h-48 bg-gradient-to-br from-[#f26457] to-[#f2b749] flex items-center justify-center">
+                  <div className="w-full h-48 sm:h-56 bg-gradient-to-br from-[#f26457] to-[#f2b749] flex items-center justify-center">
                     <div className="text-white text-center">
-                      <div className="text-2xl sm:text-3xl mb-2">👟</div>
-                      <div className="text-xs sm:text-sm opacity-90">Best Seller {item}</div>
+                      <div className="text-3xl sm:text-4xl mb-3">👟</div>
+                      <div className="text-sm sm:text-base opacity-90">Best Seller {item}</div>
                     </div>
                   </div>
                   
                   {/* Wishlist button */}
-                  <button className="absolute top-2 sm:top-3 right-2 sm:right-3 p-1.5 sm:p-2 bg-white rounded-full shadow-md hover:bg-[#f2b749] hover:text-white transition-colors">
-                    <Heart size={14} />
+                  <button className="absolute top-3 sm:top-4 right-3 sm:right-4 p-2 sm:p-3 bg-white rounded-full shadow-lg hover:bg-[#f2b749] hover:text-white transition-all duration-300">
+                    <Heart size={18} />
                   </button>
                   
                   {/* Quick view overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                    <button className="opacity-0 group-hover:opacity-100 bg-white text-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-md font-semibold hover:bg-[#f2b749] hover:text-white transition-all duration-300 text-xs sm:text-sm">
-                      <Eye size={14} className="mr-1" />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <button className="opacity-0 group-hover:opacity-100 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#f2b749] hover:text-white transition-all duration-300 text-sm sm:text-base shadow-lg">
+                      <Eye size={16} className="mr-2" />
                       Quick View
                     </button>
                   </div>
                 </div>
                 
-                <div className="p-3 sm:p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs sm:text-sm text-gray-500">Featured</span>
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-sm sm:text-base text-gray-500">Featured</span>
                   </div>
                   
-                  <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Premium Sneakers</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3 text-base sm:text-lg">Premium Sneakers</h3>
                   
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-base sm:text-lg font-bold text-black">1,200 EGP</span>
-                    <span className="text-xs sm:text-sm text-gray-500 line-through">1,500 EGP</span>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <span className="text-lg sm:text-xl font-bold text-black">1,200 EGP</span>
+                    <span className="text-sm sm:text-base text-gray-500 line-through">1,500 EGP</span>
                   </div>
                   
-                  <button className="w-full bg-[#f2b749] text-white py-2 rounded-md hover:bg-[#f2b749]/90 transition-colors text-xs sm:text-sm font-medium">
+                  <button className="w-full bg-[#f2b749] text-white py-3 rounded-lg hover:bg-[#f2b749]/90 transition-colors text-sm sm:text-base font-medium shadow-md hover:shadow-lg">
                     Add to Cart
                   </button>
                 </div>
@@ -182,41 +182,41 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-50 py-8 sm:py-12 lg:py-16">
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Why Choose Fresh Kicks?</h2>
-            <p className="text-sm sm:text-base text-gray-600">We provide the best shopping experience for our customers</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Why Choose Fresh Kicks?</h2>
+            <p className="text-lg sm:text-xl text-gray-600">We provide the best shopping experience for our customers</p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
             <div className="text-center">
-              <div className="bg-[#f26457]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Shield className="text-[#f26457]" size={20} />
+              <div className="bg-[#f26457]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Shield className="text-[#f26457]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Cash on Delivery</h3>
-              <p className="text-sm sm:text-base text-gray-600">Pay with cash when your order arrives</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Cash on Delivery</h3>
+              <p className="text-base sm:text-lg text-gray-600">Pay with cash when your order arrives</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#f2b749]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Truck className="text-[#f2b749]" size={20} />
+              <div className="bg-[#f2b749]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Truck className="text-[#f2b749]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Fast Delivery</h3>
-              <p className="text-sm sm:text-base text-gray-600">Free shipping on orders over 500 EGP</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Fast Delivery</h3>
+              <p className="text-base sm:text-lg text-gray-600">Free shipping on orders over 500 EGP</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#f2c849]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <CheckCircle className="text-[#f2c849]" size={20} />
+              <div className="bg-[#f2c849]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <CheckCircle className="text-[#f2c849]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Easy Returns</h3>
-              <p className="text-sm sm:text-base text-gray-600">30-day return policy for all products</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">Easy Returns</h3>
+              <p className="text-base sm:text-lg text-gray-600">30-day return policy for all products</p>
             </div>
             <div className="text-center sm:col-span-2 lg:col-span-1">
-              <div className="bg-[#f26457]/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Clock className="text-[#f26457]" size={20} />
+              <div className="bg-[#f26457]/10 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Clock className="text-[#f26457]" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">24/7 Support</h3>
-              <p className="text-sm sm:text-base text-gray-600">Round the clock customer support</p>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">24/7 Support</h3>
+              <p className="text-base sm:text-lg text-gray-600">Round the clock customer support</p>
             </div>
           </div>
         </div>
