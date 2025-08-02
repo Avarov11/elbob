@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               className="flex items-center p-2 -m-2"
             >
               <img 
-                src="/src/photos/frsh kicks.png" 
+                src="/images/frsh kicks.png" 
                 alt="Fresh Kicks Logo" 
                 className="h-8 sm:h-10 w-auto hover:opacity-80 transition-opacity"
               />

@@ -12,11 +12,11 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src="/src/photos/Image_fx.jpg"
-            alt="Fresh Kicks Hero"
-            className="w-full h-full object-cover"
-          />
+                      <img
+              src="/images/Image_fx.jpg"
+              alt="Fresh Kicks Hero"
+              className="w-full h-full object-cover"
+            />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
@@ -88,11 +88,11 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Men's Category */}
             <div className="relative group cursor-pointer" onClick={() => onNavigate('products-men')}>
               <div className="relative overflow-hidden rounded-lg shadow-lg h-64 sm:h-80">
-                <img
-                  src="/src/photos/Image_fx (1).jpg"
-                  alt="Men's Collection"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                                  <img
+                    src="/images/Image_fx (1).jpg"
+                    alt="Men's Collection"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white">
                   <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Men's Collection</h3>
@@ -107,11 +107,11 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Women's Category */}
             <div className="relative group cursor-pointer" onClick={() => onNavigate('products-women')}>
               <div className="relative overflow-hidden rounded-lg shadow-lg h-64 sm:h-80">
-                <img
-                  src="/src/photos/Image_fx (2).jpg"
-                  alt="Women's Collection"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                                  <img
+                    src="/images/Image_fx (2).jpg"
+                    alt="Women's Collection"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white">
                   <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Women's Collection</h3>

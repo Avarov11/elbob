@@ -23,10 +23,10 @@ export const products: EnhancedProduct[] = [
     featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/running.jpg',
+    cardImage: '/images/running.jpg',
     detailImages: [
-      '/src/photos/running.jpg',
-      '/src/photos/running (2).jpg'
+      '/images/running.jpg',
+      '/images/running (2).jpg'
     ],
     features: [
       'Advanced cushioning technology',
@@ -57,11 +57,11 @@ export const products: EnhancedProduct[] = [
     featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/black.jpg',
+    cardImage: '/images/black.jpg',
     detailImages: [
-      '/src/photos/running (2).jpg',
-      '/src/photos/running.jpg',
-      '/src/photos/running2.jpg'
+      '/images/running (2).jpg',
+      '/images/running.jpg',
+      '/images/running2.jpg'
     ],
     features: [
       'Enhanced comfort technology',
@@ -91,207 +91,210 @@ export const products: EnhancedProduct[] = [
     featured: false,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/white.jpg',
+    cardImage: '/images/white.jpg',
     detailImages: [
-      '/src/photos/white.jpg',
-      '/src/photos/running2.jpg',
-      '/src/photos/running3.jpg',
-      '/src/photos/running (2).jpg'
+      '/images/white.jpg',
+      '/images/running2.jpg',
+      '/images/running3.jpg',
+      '/images/running (2).jpg'
     ],
     features: [
       'Ultra-lightweight design',
       'Speed-focused construction',
       'Agility training optimized',
-      'Minimalist feel'
+      'Minimalist upper'
     ],
     specifications: {
       'Weight': '220g',
       'Drop': '6mm',
       'Stack Height': '28mm',
       'Upper': 'Lightweight Mesh',
-      'Midsole': 'Compressed EVA',
-      'Outsole': 'Lightweight Rubber'
+      'Midsole': 'EVA Foam',
+      'Outsole': 'Rubber'
     }
   },
   {
     id: '4',
     name: 'Men\'s Professional Running Shoes',
     price: 1200,
+    originalPrice: 1500,
     images: [], // Legacy field - use cardImage instead
-    description: 'Professional-grade running shoes with advanced technology for competitive athletes. Designed for elite performance.',
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    colors: ['Black', 'Blue', 'Orange'],
+    description: 'Professional-grade running shoes with advanced technology for competitive athletes. Maximum performance and comfort for serious runners.',
+    sizes: ['40', '41', '42', '43', '44', '45', '46'],
+    colors: ['Black', 'Blue', 'Red'],
     gender: 'men',
     category: 'Athletic',
     featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/running3.jpg',
+    cardImage: '/images/running2.jpg',
     detailImages: [
-      '/src/photos/running3.jpg',
-      '/src/photos/black.jpg',
-      '/src/photos/white.jpg',
-      '/src/photos/running.jpg'
+      '/images/running2.jpg',
+      '/images/running3.jpg',
+      '/images/running.jpg',
+      '/images/black.jpg'
     ],
     features: [
       'Professional-grade technology',
-      'Elite performance design',
-      'Advanced cushioning system',
-      'Competition-ready'
+      'Competitive athlete design',
+      'Maximum performance features',
+      'Advanced comfort system'
     ],
     specifications: {
       'Weight': '290g',
       'Drop': '8mm',
       'Stack Height': '30mm',
-      'Upper': 'Performance Mesh',
-      'Midsole': 'Advanced Foam',
-      'Outsole': 'Performance Rubber'
+      'Upper': 'Engineered Mesh',
+      'Midsole': 'Carbon Fiber Plate',
+      'Outsole': 'Carbon Rubber'
     }
   },
 
   // WOMEN'S PRODUCTS (4 products)
   {
     id: '5',
-    name: 'Elegant High Heels',
-    price: 800,
+    name: 'Women\'s Comfort Running Shoes',
+    price: 900,
     images: [], // Legacy field - use cardImage instead
-    description: 'Sophisticated high heel shoes perfect for formal events and special occasions. Elegant and sophisticated design.',
-    sizes: ['35', '36', '37', '38', '39', '40', '41'],
-    colors: ['Black', 'Red', 'Nude'],
+    description: 'Comfortable running shoes designed specifically for women with enhanced cushioning and support. Perfect for daily training and casual running.',
+    sizes: ['36', '37', '38', '39', '40', '41', '42'],
+    colors: ['Pink', 'Purple', 'White'],
     gender: 'women',
-    category: 'Heels',
-    featured: false,
+    category: 'Athletic',
+    featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/Image_fx.jpg',
+    cardImage: '/images/Image_fx (1).jpg',
     detailImages: [
-      '/src/photos/Image_fx.jpg',
-      '/src/photos/Image_fx (1).jpg',
-      '/src/photos/Image_fx (2).jpg',
-      '/src/photos/frsh kicks.png'
+      '/images/Image_fx (1).jpg',
+      '/images/Image_fx (2).jpg',
+      '/images/Image_fx.jpg'
     ],
     features: [
-      'Sophisticated design',
-      'Formal event perfect',
-      'Elegant styling',
-      'Comfortable heel'
+      'Women-specific design',
+      'Enhanced cushioning',
+      'Comfortable fit',
+      'Breathable upper'
     ],
     specifications: {
-      'Heel Height': '8cm',
-      'Material': 'Leather',
-      'Sole': 'Leather',
-      'Closure': 'Slip-on',
-      'Style': 'Pump',
-      'Occasion': 'Formal'
+      'Weight': '250g',
+      'Drop': '8mm',
+      'Stack Height': '30mm',
+      'Upper': 'Mesh',
+      'Midsole': 'EVA Foam',
+      'Outsole': 'Rubber'
     }
   },
   {
     id: '6',
-    name: 'Fashion Sandals',
-    price: 450,
+    name: 'Women\'s Performance Running Shoes',
+    price: 1050,
+    originalPrice: 1250,
     images: [], // Legacy field - use cardImage instead
-    description: 'Trendy sandals perfect for summer and warm weather occasions. Light and breezy design for warm weather.',
-    sizes: ['35', '36', '37', '38', '39', '40'],
-    colors: ['Gold', 'Silver', 'Black'],
+    description: 'High-performance running shoes for women with advanced technology and stylish design. Perfect for competitive runners and serious athletes.',
+    sizes: ['37', '38', '39', '40', '41', '42'],
+    colors: ['Blue', 'Green', 'Black'],
     gender: 'women',
-    category: 'Sandals',
-    featured: false,
+    category: 'Athletic',
+    featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/frsh kicks.png',
+    cardImage: '/images/Image_fx (2).jpg',
     detailImages: [
-      '/src/photos/frsh kicks.png',
-      '/src/photos/Image_fx.jpg',
-      '/src/photos/Image_fx (1).jpg',
-      '/src/photos/Image_fx (2).jpg'
+      '/images/Image_fx (2).jpg',
+      '/images/Image_fx.jpg',
+      '/images/Image_fx (1).jpg',
+      '/images/running3.jpg'
     ],
     features: [
-      'Trendy summer design',
-      'Warm weather perfect',
-      'Light and breezy',
-      'Versatile styling'
+      'High-performance technology',
+      'Competitive design',
+      'Advanced comfort features',
+      'Stylish appearance'
     ],
     specifications: {
-      'Heel Height': '2cm',
-      'Material': 'Synthetic',
-      'Sole': 'Rubber',
-      'Closure': 'Slip-on',
-      'Style': 'Flat Sandal',
-      'Season': 'Summer'
+      'Weight': '270g',
+      'Drop': '10mm',
+      'Stack Height': '32mm',
+      'Upper': 'Engineered Mesh',
+      'Midsole': 'Dual-density Foam',
+      'Outsole': 'Carbon Rubber'
     }
   },
   {
     id: '7',
-    name: 'Women\'s Casual Sneakers',
-    price: 650,
-    originalPrice: 750,
+    name: 'Women\'s Lightweight Training Shoes',
+    price: 800,
     images: [], // Legacy field - use cardImage instead
-    description: 'Comfortable casual sneakers perfect for everyday wear and casual outings. Comfortable and stylish for everyday wear.',
+    description: 'Lightweight training shoes perfect for gym workouts and cross-training sessions. Versatile design for various fitness activities.',
     sizes: ['36', '37', '38', '39', '40', '41'],
-    colors: ['White', 'Pink', 'Gray'],
+    colors: ['White', 'Gray', 'Pink'],
     gender: 'women',
-    category: 'Sneakers',
-    featured: true,
+    category: 'Athletic',
+    featured: false,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/running.jpg',
+    cardImage: '/images/Image_fx.jpg',
     detailImages: [
-      '/src/photos/running.jpg',
-      '/src/photos/running2.jpg',
-      '/src/photos/running3.jpg',
-      '/src/photos/running (2).jpg'
+      '/images/Image_fx.jpg',
+      '/images/Image_fx (1).jpg',
+      '/images/Image_fx (2).jpg',
+      '/images/white.jpg'
     ],
     features: [
-      'Comfortable everyday wear',
-      'Casual outing perfect',
-      'Stylish design',
-      'Versatile colors'
+      'Lightweight construction',
+      'Versatile training design',
+      'Gym workout optimized',
+      'Cross-training ready'
     ],
     specifications: {
-      'Weight': '250g',
+      'Weight': '240g',
       'Drop': '6mm',
-      'Stack Height': '25mm',
-      'Upper': 'Canvas',
+      'Stack Height': '28mm',
+      'Upper': 'Lightweight Mesh',
       'Midsole': 'EVA Foam',
       'Outsole': 'Rubber'
     }
   },
   {
     id: '8',
-    name: 'Women\'s Fashion Boots',
-    price: 900,
+    name: 'Women\'s Premium Athletic Shoes',
+    price: 1150,
+    originalPrice: 1400,
     images: [], // Legacy field - use cardImage instead
-    description: 'Stylish fashion boots perfect for autumn and winter seasons. Trendy boots perfect for any season.',
-    sizes: ['36', '37', '38', '39', '40', '41'],
-    colors: ['Black', 'Brown', 'Tan'],
+    description: 'Premium athletic shoes with luxury materials and advanced technology. Perfect for serious athletes who demand the best performance.',
+    sizes: ['37', '38', '39', '40', '41', '42'],
+    colors: ['Black', 'White', 'Gold'],
     gender: 'women',
-    category: 'Boots',
+    category: 'Athletic',
     featured: true,
     inStock: true,
     // 🖼️ IMAGES - EDIT HERE
-    cardImage: '/src/photos/black.jpg',
+    cardImage: '/images/running3.jpg',
     detailImages: [
-      '/src/photos/black.jpg',
-      '/src/photos/white.jpg'
+      '/images/running3.jpg',
+      '/images/running2.jpg',
+      '/images/black.jpg',
+      '/images/white.jpg'
     ],
     features: [
-      'Stylish fashion design',
-      'Autumn/winter perfect',
-      'Trendy styling',
-      'Seasonal versatility'
+      'Premium materials',
+      'Luxury construction',
+      'Advanced technology',
+      'Elite performance'
     ],
     specifications: {
-      'Heel Height': '5cm',
-      'Material': 'Leather',
-      'Sole': 'Rubber',
-      'Closure': 'Zipper',
-      'Style': 'Ankle Boot',
-      'Season': 'Autumn/Winter'
+      'Weight': '260g',
+      'Drop': '8mm',
+      'Stack Height': '30mm',
+      'Upper': 'Premium Mesh',
+      'Midsole': 'Carbon Fiber',
+      'Outsole': 'Premium Rubber'
     }
   }
 ];
 
-// Helper functions for easy access
+// Helper functions
 export const getProductById = (id: string): EnhancedProduct | undefined => {
   return products.find(product => product.id === id);
 };

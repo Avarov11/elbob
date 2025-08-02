@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <img 
-                src="/src/photos/frsh kicks.png" 
+                src="/images/frsh kicks.png" 
                 alt="Fresh Kicks Logo" 
                 className="h-6 sm:h-8 w-auto mr-3"
               />
