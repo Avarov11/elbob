@@ -44,8 +44,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 onClick={() => onNavigate(item.href)}
                 className={`text-sm font-medium transition-colors px-3 py-2 rounded-md ${
                   currentPage === item.href
-                    ? 'text-[#f2b749] bg-[#f2b749]/10'
-                    : 'text-gray-700 hover:text-[#f2b749] hover:bg-gray-50'
+                    ? 'text-gray-900 bg-gray-100'
+                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
                 {item.name}
@@ -55,19 +55,19 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
 
           {/* Right side icons */}
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <button className="p-2 text-gray-700 hover:text-[#f2b749] transition-colors">
+            <button className="p-2 text-gray-700 hover:text-gray-900 transition-colors">
               <Search size={18} className="sm:w-5 sm:h-5" />
             </button>
-            <button className="p-2 text-gray-700 hover:text-[#f2b749] transition-colors">
+            <button className="p-2 text-gray-700 hover:text-gray-900 transition-colors">
               <User size={18} className="sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={() => onNavigate('cart')}
-              className="relative p-2 text-gray-700 hover:text-[#f2b749] transition-colors"
+              className="relative p-2 text-gray-700 hover:text-gray-900 transition-colors"
             >
               <ShoppingCart size={18} className="sm:w-5 sm:h-5" />
               {getItemCount() > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#f2b749] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
+                <span className="absolute -top-1 -right-1 bg-gray-900 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
                   {getItemCount()}
                 </span>
               )}
@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-[#f2b749] transition-colors"
+              className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -96,8 +96,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                   }}
                   className={`block px-4 py-3 text-base font-medium w-full text-left transition-colors rounded-md ${
                     currentPage === item.href
-                      ? 'text-[#f2b749] bg-[#f2b749]/10'
-                      : 'text-gray-700 hover:text-[#f2b749] hover:bg-gray-50'
+                      ? 'text-gray-900 bg-gray-100'
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
