@@ -76,20 +76,20 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Breadcrumb */}
         <button
           onClick={() => onNavigate('products')}
-          className="flex items-center text-gray-600 hover:text-red-600 transition-colors mb-8"
+          className="flex items-center text-gray-600 hover:text-red-600 transition-colors mb-6 sm:mb-8"
         >
-          <ArrowLeft size={20} className="mr-2" />
+          <ArrowLeft size={18} className="mr-2" />
           Back to Products
         </button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12">
           {/* Product Images */}
-          <div className="space-y-4">
-            <div className="bg-white rounded-lg overflow-hidden h-[500px]">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="bg-white rounded-lg overflow-hidden h-64 sm:h-80 lg:h-[500px]">
               {detailImages.length > 0 ? (
                 <img
                   src={detailImages[selectedImage]}
@@ -97,10 +97,10 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-[#f26457] to-[#f2b749]">
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#f26457] to-[#f2b749]">
                   <div className="text-white text-center">
-                    <div className="text-6xl mb-4">👟</div>
-                    <div className="text-lg">{product.name}</div>
+                    <div className="text-4xl sm:text-6xl mb-2 sm:mb-4">👟</div>
+                    <div className="text-sm sm:text-lg">{product.name}</div>
                   </div>
                 </div>
               )}
@@ -108,12 +108,12 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
             
             {/* Image Thumbnails */}
             {detailImages.length > 1 && (
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4">
                 {detailImages.map((image: string, index: number) => (
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`bg-white rounded-lg overflow-hidden border-2 h-[120px] ${
+                    className={`bg-white rounded-lg overflow-hidden border-2 h-16 sm:h-20 lg:h-[120px] ${
                       selectedImage === index ? 'border-red-600' : 'border-gray-200'
                     }`}
                   >
@@ -129,42 +129,42 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
           </div>
 
           {/* Product Details */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-500 capitalize">{product.category}</span>
+                <span className="text-xs sm:text-sm text-gray-500 capitalize">{product.category}</span>
               </div>
               
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{product.name}</h1>
               
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-2xl font-bold text-black">
+              <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                <span className="text-xl sm:text-2xl font-bold text-black">
                   {product.price.toLocaleString()} EGP
                 </span>
                 {product.originalPrice && (
-                  <span className="text-lg text-gray-500 line-through">
+                  <span className="text-base sm:text-lg text-gray-500 line-through">
                     {product.originalPrice.toLocaleString()} EGP
                   </span>
                 )}
                 {product.originalPrice && (
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-md text-sm font-semibold">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-md text-xs sm:text-sm font-semibold">
                     -{Math.round((1 - product.price / product.originalPrice) * 100)}%
                   </span>
                 )}
               </div>
               
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                 {product.description}
               </p>
 
               {/* Product Features */}
               {product.features && product.features.length > 0 && (
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Features</h3>
-                  <ul className="space-y-2">
+                <div className="mb-4 sm:mb-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">Features</h3>
+                  <ul className="space-y-1 sm:space-y-2">
                     {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-700">
-                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                      <li key={index} className="flex items-center text-sm sm:text-base text-gray-700">
+                        <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600 rounded-full mr-2 sm:mr-3 flex-shrink-0"></span>
                         {feature}
                       </li>
                     ))}
@@ -174,13 +174,13 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
 
               {/* Product Specifications */}
               {product.specifications && Object.keys(product.specifications).length > 0 && (
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Specifications</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="mb-4 sm:mb-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">Specifications</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {Object.entries(product.specifications).map(([key, value]) => (
                       <div key={key} className="flex justify-between">
-                        <span className="text-gray-600 font-medium">{key}:</span>
-                        <span className="text-gray-900">{value}</span>
+                        <span className="text-xs sm:text-sm text-gray-600 font-medium">{key}:</span>
+                        <span className="text-xs sm:text-sm text-gray-900">{value}</span>
                       </div>
                     ))}
                   </div>
@@ -190,13 +190,13 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
 
             {/* Color Selection */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Color</h3>
-              <div className="flex space-x-3">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">Color</h3>
+              <div className="flex space-x-2 sm:space-x-3">
                 {product.colors.map((color) => (
                   <button
                     key={color}
                     onClick={() => setSelectedColor(color)}
-                    className={`w-8 h-8 rounded-full border-2 transition-colors ${
+                    className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 transition-colors ${
                       selectedColor === color ? 'border-gray-900' : 'border-gray-300'
                     }`}
                     style={{ backgroundColor: color.toLowerCase() }}
@@ -208,21 +208,21 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
 
             {/* Size Selection */}
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold text-gray-900">Size</h3>
+              <div className="flex items-center justify-between mb-2 sm:mb-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900">Size</h3>
                 <button
                   onClick={() => setShowSizeGuide(!showSizeGuide)}
-                  className="text-sm text-red-600 hover:text-red-700"
+                  className="text-xs sm:text-sm text-red-600 hover:text-red-700"
                 >
                   Size Guide
                 </button>
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                 {product.sizes.map((size) => (
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`py-2 px-3 border rounded-md text-sm font-medium transition-colors ${
+                    className={`py-2 px-2 sm:px-3 border rounded-md text-xs sm:text-sm font-medium transition-colors ${
                       selectedSize === size
                         ? 'border-red-600 bg-red-600 text-white'
                         : 'border-gray-300 hover:border-red-600'
@@ -236,20 +236,20 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
 
             {/* Quantity */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantity</h3>
-              <div className="flex items-center space-x-3">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">Quantity</h3>
+              <div className="flex items-center space-x-2 sm:space-x-3">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="p-2 border border-gray-300 rounded-md hover:bg-gray-50"
                 >
-                  <Minus size={16} />
+                  <Minus size={14} />
                 </button>
-                <span className="w-12 text-center font-semibold">{quantity}</span>
+                <span className="w-10 sm:w-12 text-center font-semibold text-sm sm:text-base">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="p-2 border border-gray-300 rounded-md hover:bg-gray-50"
                 >
-                  <Plus size={16} />
+                  <Plus size={14} />
                 </button>
               </div>
             </div>
@@ -259,31 +259,31 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
               <button
                 onClick={handleAddToCart}
                 disabled={!product.inStock}
-                className="w-full bg-red-600 text-white py-4 rounded-md hover:bg-red-700 transition-colors font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-md hover:bg-red-700 transition-colors font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
-                <ShoppingCart size={20} />
+                <ShoppingCart size={18} />
                 <span>Add to Cart</span>
               </button>
               
               <button 
                 onClick={handleBuyNow}
                 disabled={!product.inStock}
-                className="w-full border-2 border-black text-black py-4 rounded-md hover:bg-black hover:text-white transition-colors font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full border-2 border-black text-black py-3 sm:py-4 rounded-md hover:bg-black hover:text-white transition-colors font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed text-sm sm:text-base"
               >
                 Buy Now
               </button>
             </div>
 
             {/* Product Features */}
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
               {[
                 { icon: Truck, text: 'Free shipping on orders over 1000 EGP', color: 'text-orange-500' },
                 { icon: RotateCcw, text: '14-day return policy', color: 'text-yellow-500' },
                 { icon: Shield, text: '6-month warranty included', color: 'text-orange-500' },
               ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <feature.icon className={feature.color} size={24} />
-                  <span className="text-gray-700">{feature.text}</span>
+                <div key={index} className="flex items-center space-x-2 sm:space-x-3">
+                  <feature.icon className={feature.color} size={20} />
+                  <span className="text-xs sm:text-sm text-gray-700">{feature.text}</span>
                 </div>
               ))}
             </div>

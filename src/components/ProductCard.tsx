@@ -26,8 +26,8 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
 
   return (
     <div className="group cursor-pointer" onClick={() => onViewProduct(product.id)}>
-      <div className="relative mb-4">
-        <div className="w-full h-80 bg-gray-100 overflow-hidden">
+      <div className="relative mb-3 sm:mb-4">
+        <div className="w-full h-64 sm:h-72 lg:h-80 bg-gray-100 overflow-hidden">
           {images.length > 0 ? (
             <img
               src={images[currentImageIndex]}
@@ -39,8 +39,8 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
                 target.parentElement!.innerHTML = `
                   <div class="w-full h-full flex items-center justify-center">
                     <div class="text-gray-600 text-center">
-                      <div class="text-4xl mb-2">👟</div>
-                      <div class="text-sm opacity-90">${product.name}</div>
+                      <div class="text-3xl sm:text-4xl mb-2">👟</div>
+                      <div class="text-xs sm:text-sm opacity-90">${product.name}</div>
                     </div>
                   </div>
                 `;
@@ -49,8 +49,8 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <div className="text-gray-600 text-center">
-                <div className="text-4xl mb-2">👟</div>
-                <div className="text-sm opacity-90">{product.name}</div>
+                <div className="text-3xl sm:text-4xl mb-2">👟</div>
+                <div className="text-xs sm:text-sm opacity-90">{product.name}</div>
               </div>
             </div>
           )}
@@ -63,27 +63,27 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
                   e.stopPropagation();
                   prevImage();
                 }}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
+                className="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-1.5 sm:p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
                 aria-label="Previous image"
               >
-                <ChevronLeft size={16} />
+                <ChevronLeft size={14} />
               </button>
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   nextImage();
                 }}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
+                className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-1.5 sm:p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
                 aria-label="Next image"
               >
-                <ChevronRight size={16} />
+                <ChevronRight size={14} />
               </button>
             </>
           )}
           
           {/* Image Dots Indicator */}
           {hasMultipleImages && (
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+            <div className="absolute bottom-1 sm:bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
               {images.map((_, index) => (
                 <button
                   key={index}
@@ -91,7 +91,7 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
                     e.stopPropagation();
                     setCurrentImageIndex(index);
                   }}
-                  className={`w-2 h-2 rounded-full transition-colors ${
+                  className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${
                     index === currentImageIndex 
                       ? 'bg-black' 
                       : 'bg-black/50 hover:bg-black/75'
@@ -105,30 +105,30 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
         
         {/* Discount badge */}
         {discountPercentage > 0 && (
-          <div className="absolute top-3 left-3 bg-black text-white px-2 py-1 text-sm font-semibold">
+          <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-black text-white px-2 py-1 text-xs sm:text-sm font-semibold">
             -{discountPercentage}%
           </div>
         )}
         
         {/* Wishlist button */}
         <button 
-          className="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-black hover:text-white transition-colors"
+          className="absolute top-2 sm:top-3 right-2 sm:right-3 p-1.5 sm:p-2 bg-white rounded-full shadow-md hover:bg-black hover:text-white transition-colors"
           aria-label="Add to wishlist"
           onClick={(e) => e.stopPropagation()}
         >
-          <Heart size={16} />
+          <Heart size={14} />
         </button>
       </div>
       
-      <div className="space-y-2">
-        <h3 className="font-medium text-black text-lg">{product.name}</h3>
+      <div className="space-y-1 sm:space-y-2">
+        <h3 className="font-medium text-black text-sm sm:text-base lg:text-lg">{product.name}</h3>
         
         <div className="flex items-center space-x-2">
-          <span className="text-lg font-bold text-black">
+          <span className="text-base sm:text-lg font-bold text-black">
             {product.price.toLocaleString()} EGP
           </span>
           {product.originalPrice && (
-            <span className="text-sm text-gray-500 line-through">
+            <span className="text-xs sm:text-sm text-gray-500 line-through">
               {product.originalPrice.toLocaleString()} EGP
             </span>
           )}
@@ -138,7 +138,7 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product, onViewProduct }
           {product.colors.slice(0, 3).map((color, index) => (
             <div
               key={index}
-              className="w-4 h-4 rounded-full border border-gray-300"
+              className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border border-gray-300"
               style={{ backgroundColor: color.toLowerCase() }}
               title={color}
               aria-label={`Color: ${color}`}

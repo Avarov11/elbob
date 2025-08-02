@@ -24,18 +24,18 @@ const MensPage: React.FC<MensPageProps> = ({ onViewProduct }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Simple Header */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-black mb-2">Men's Collection</h1>
-          <p className="text-gray-600 text-lg">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-2">Men's Collection</h1>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600">
             Performance running shoes for every athlete
           </p>
         </div>
 
         {/* Simple Controls */}
-        <div className="flex justify-between items-center mb-8">
-          <div className="text-sm text-gray-600">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <div className="text-xs sm:text-sm text-gray-600">
             {mensProducts.length} products
           </div>
 
@@ -43,15 +43,15 @@ const MensPage: React.FC<MensPageProps> = ({ onViewProduct }) => {
           <div className="flex border border-gray-300 rounded-md overflow-hidden">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-3 ${viewMode === 'grid' ? 'bg-black text-white' : 'text-gray-600 hover:bg-gray-50'}`}
+              className={`p-2 sm:p-3 ${viewMode === 'grid' ? 'bg-black text-white' : 'text-gray-600 hover:bg-gray-50'}`}
             >
-              <Grid size={20} />
+              <Grid size={16} className="sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-3 ${viewMode === 'list' ? 'bg-black text-white' : 'text-gray-600 hover:bg-gray-50'}`}
+              className={`p-2 sm:p-3 ${viewMode === 'list' ? 'bg-black text-white' : 'text-gray-600 hover:bg-gray-50'}`}
             >
-              <List size={20} />
+              <List size={16} className="sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
@@ -59,11 +59,11 @@ const MensPage: React.FC<MensPageProps> = ({ onViewProduct }) => {
         {/* Products Grid */}
         <div className="flex-1">
           {mensProducts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No products found.</p>
+            <div className="text-center py-8 sm:py-12">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-500">No products found.</p>
             </div>
           ) : (
-            <div className={`grid gap-8 ${
+            <div className={`grid gap-4 sm:gap-6 lg:gap-8 ${
               viewMode === 'grid' 
                 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
                 : 'grid-cols-1'
