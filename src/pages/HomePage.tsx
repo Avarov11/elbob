@@ -7,18 +7,18 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-                      <img
-              src="/images/Image_fx.jpg"
-              alt="Fresh Kicks Hero"
-              className="w-full h-full object-cover"
-            />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+<div className="min-h-screen bg-gray-50">
+  {/* Hero Section */}
+  <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    {/* Background Image */}
+    <div className="absolute inset-0 w-full h-full">
+      <img
+        src="/images/Image_fx.jpg"
+        alt="Fresh Kicks Hero"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/40" />
+    </div>
         
         {/* Content */}
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
